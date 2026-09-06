@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Болдырев Леонид Александрович — Инженер-эколог</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --primary-green: #1b5e20;
+            --primary-hover: #2e7d32;
+            --whatsapp-color: #25d366;
+            --telegram-color: #0088cc;
+            --phone-color: #343a40;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px 20px;
+            margin-top: 10px;
+        }
+
+        /* Шапка */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .header .subtitle {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header .region {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            background-color: #e8f5e9;
+            color: var(--primary-green);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Кнопки связи */
+        .buttons-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.1s ease, background-color 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-whatsapp { background-color: var(--whatsapp-color); }
+        .btn-whatsapp:hover { background-color: #20ba5a; }
+
+        .btn-telegram { background-color: var(--telegram-color); }
+        .btn-telegram:hover { background-color: #0077b3; }
+
+        .btn-phone { background-color: var(--phone-color); }
+        .btn-phone:hover { background-color: #23272b; }
+
+        .btn-office { 
+            background-color: transparent; 
+            border: 2px solid #ced4da;
+            color: var(--text-main);
+            box-shadow: none;
+        }
+        .btn-office:hover { background-color: #f1f3f5; }
+
+        .btn svg {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Блок услуг */
+        .services-section {
+            margin-bottom: 25px;
+        }
+
+        .services-section h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+color: var(--text-muted);
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-green);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .service-icon {
+            font-size: 18px;
+            margin-right: 12px;
+            line-height: 1.2;
+        }
+
+        .service-text {
+            font-size: 14px;
+        }
+
+        .service-text strong {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* Футер */
+        .footer {
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: #f1f3f5;
+            transition: background-color 0.2s ease;
+        }
+
+        .email-link:hover {
+            background-color: #e9ecef;
+            color: var(--primary-green);
+        }
+
+        .email-link svg {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Шапка визитки -->
+    <div class="header">
+        <h1>Болдырев Леонид Александрович</h1>
+        <div class="subtitle">Инженер-эколог</div>
+        <div class="region">Южный федеральный округ (удалённо)</div>
+        <div class="tagline">Отчётность без штрафов и авралов!</div>
+    </div>
+
+    <!-- Кнопки связи -->
+    <div class="buttons-group">
+        <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
+            <!-- Иконка WhatsApp -->
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.832.002-2.623-1.023-5.092-2.884-6.957C16.528 1.961 14.062.936 11.442.936c-5.438 0-9.863 4.414-9.866 9.833-.001 1.739.497 3.428 1.446 4.972l-.982 3.586 3.654-.958zm13.111-6.725c-.212-.106-1.251-.617-1.442-.687-.192-.069-.331-.104-.471.105-.14.209-.54.68-.662.819-.123.139-.246.156-.458.051-2.126-1.063-3.522-2.022-4.938-4.457-.139-.239-.139-.4-.244-.551-.106-.151-.212-.349-.317-.465-.106-.117-.141-.198-.213-.349-.071-.151-.035-.285.017-.391.053-.105.471-.551.529-.696.059-.145.029-.267-.014-.372-.043-.106-.471-1.136-.646-1.557-.17-.41-.357-.354-.488-.36l-.417-.008c-.145 0-.377.054-.575.271-.199.216-.757.74-.757 1.803 0 1.064.773 2.091.88 2.235.108.145 1.52 2.321 3.684 3.251.515.221.916.353 1.229.453.518.165.989.141 1.361.085.414-.062 1.251-.511 1.427-.1.176-.411.176-.763.123-.819-.054-.056-.199-.088-.412-.194z"/></svg>
+            Написать в WhatsApp
+        </a>
+        
+        <a href="https://t.me" class="btn btn-telegram" target="_blank">
+            <!-- Иконка Telegram -->
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.562 8.161c-.18.717-.962 4.384-1.362 5.477-.384 1.048-1.524 1.353-2.155.824-.46-.385-1.583-1.137-2.174-1.536-.454-.306-.11-.475.104-.693.551-.556 4.776-4.475 4.864-4.887.011-.053-.014-.149-.136-.149-.123 0-1.921 1.189-5.419 3.552-.497.337-.95.503-1.357.493-.448-.01-1.312-.254-1.954-.463-.787-.256-1.417-.393-1.363-.829.028-.228.344-.461.947-.699 3.719-1.621 6.199-2.69
+color: var(--text-muted);
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-green);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .service-icon {
+            font-size: 18px;
+            margin-right: 12px;
+            line-height: 1.2;
+        }
+
+        .service-text {
+            font-size: 14px;
+        }
+
+        .service-text strong {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* Футер */
+        .footer {
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: #f1f3f5;
+            transition: background-color 0.2s ease;
+        }
+
+        .email-link:hover {
+            background-color: #e9ecef;
+            color: var(--primary-green);
+        }
+
+        .email-link svg {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Шапка визитки -->
+    <div class="header">
+        <h1>Болдырев Леонид Александрович</h1>
+        <div class="subtitle">Инженер-эколог</div>
+        <div class="region">Южный федеральный округ (удалённо)</div>
+        <div class="tagline">Отчётность без штрафов и авралов!</div>
+    </div>
+
+    <!-- Кнопки связи -->
+    <div class="buttons-group">
+        <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
+            <!-- Иконка WhatsApp -->
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.832.002-2.623-1.023-5.092-2.884-6.957C16.528 1.961 14.062.936 11.442.936c-5.438 0-9.863 4.414-9.866 9.833-.001 1.739.497 3.428 1.446 4.972l-.982 3.586 3.654-.958zm13.111-6.725c-.212-.106-1.251-.617-1.442-.687-.192-.069-.331-.104-.471.105-.14.209-.54.68-.662.819-.123.139-.246.156-.458.051-2.126-1.063-3.522-2.022-4.938-4.457-.139-.239-.139-.4-.244-.551-.106-.151-.212-.349-.317-.465-.106-.117-.141-.198-.213-.349-.071-.151-.035-.285.017-.391.053-.105.471-.551.529-.696.059-.145.029-.267-.014-.372-.043-.106-.471-1.136-.646-1.557-.17-.41-.357-.354-.488-.36l-.417-.008c-.145 0-.377.054-.575.271-.199.216-.757.74-.757 1.803 0 1.064.773 2.091.88 2.235.108.145 1.52 2.321 3.684 3.251.515.221.916.353 1.229.453.518.165.989.141 1.361.085.414-.062 1.251-.511 1.427-.1.176-.411.176-.763.123-.819-.054-.056-.199-.088-.412-.194z"/></svg>
+            Написать в WhatsApp
+        </a>
+        
+        <a href="https://t.me" class="btn btn-telegram" target="_blank">
+            <!-- Иконка Telegram -->
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.562 8.161c-.18.717-.962 4.384-1.362 5.477-.384 1.048-1.524 1.353-2.155.824-.46-.385-1.583-1.137-2.174-1.536-.454-.306-.11-.475.104-.693.551-.556 4.776-4.475 4.864-4.887.011-.053-.014-.149-.136-.149-.123 0-1.921 1.189-5.419 3.552-.497.337-.95.503-1.357.493-.448-.01-1.312-.254-1.954-.463-.787-.256-1.417-.393-1.363-.829.028-.228.344-.461.947-.699 3.719-1.621 6.199-2.69
