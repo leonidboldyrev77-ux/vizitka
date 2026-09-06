@@ -1,82 +1,308 @@
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИП Болдырев Л.А. — Экологические услуги</title>
+
+    <!-- МЕТА-ТЕГИ ДЛЯ КРАСИВОГО ПРЕВЬЮ В WHATSAPP И TELEGRAM -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ИП Болдырев Л.А. — Экологические услуги">
+    <meta property="og:description" content="Экологическая отчётность для бизнеса без штрафов и авралов. Все виды услуг: НВОС, ПЭК, РОП, Паспорта отходов, Аудит.">
+    <meta property="og:image" content="https://github.io">
+    <meta property="og:url" content="https://github.io">
+
+    <style>
+        :root {
+            --bg-color: #f4f6f4;
+            --card-bg: #ffffff;
+            --text-main: #2b302b;
+            --text-muted: #666e66;
+            --primary-green: #4b664c; /* Благородный хвойный цвет из вашего логотипа */
+            --whatsapp-color: #25d366;
+            --telegram-color: #0088cc;
+            --phone-color: #343a40;
+            --light-eco-bg: #eef2ee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(75, 102, 76, 0.08);
+            padding: 30px 20px;
+            margin-top: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Стильный круглый блок для вашего логотипа */
+        .logo-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--light-eco-bg);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+        }
+
+        .header .region {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            background-color: var(--light-eco-bg);
+            color: var(--primary-green);
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .buttons-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-whatsapp { background-color: var(--whatsapp-color); }
+        .btn-telegram { background-color: var(--telegram-color); }
+        .btn-phone { background-color: var(--phone-color); }
+       
+        .btn-office {
+            background-color: transparent;
+            border: 2px solid #ced4da;
+            color: var(--text-main);
+            box-shadow: none;
+        }
+
+        .btn-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            display: inline-block;
+        }
+
+        .services-section h2, .faq-section h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 14px 16px;
+            background-color: #fafbfa;
+            border-left: 4px solid var(--primary-green);
+            border-radius: 0 12px 12px 0;
+            border: 1px solid #eef0ee;
+            border-left-width: 4px;
+        }
+
+        .service-icon {
+            font-size: 18px;
+            margin-right: 12px;
+            line-height: 1.2;
+        }
+
+        .service-text {
+            font-size: 14px;
+            color: #333933;
+        }
+
+        .service-text strong {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* ИНТЕРАКТИВНЫЙ БЛОК ВОПРОСОВ (FAQ) */
+        .faq-section {
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            background: #fafbfa;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eef0ee;
+        }
+        .faq-question {
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-main);
+            list-style: none;
+            position: relative;
+        }
+        .faq-question::-webkit-details-marker { display: none; }
+        .faq-question::after {
+            content: "＋";
+            position: absolute;
+            right: 15px;
+            color: var(--primary-green);
+        }
+        .faq-item[open] .faq-question::after {
+            content: "－";
+        }
+        .faq-answer {
+            padding: 0 15px 15px 15px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            border-top: 1px solid #eef0ee;
+            padding-top: 25px;
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: var(--light-eco-bg);
+            color: var(--primary-green);
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>Болдырев Леонид Александрович</h1>
-        <div class="subtitle">Инженер-эколог</div>
-        <div class="region">Южный федеральный округ (удалённо)</div>
-        <div class="tagline">Отчётность без штрафов и авралов!</div>
-    </div>
-
-    <div class="buttons-group">
-        <a href="https://wa.me/79044444570" class="btn btn-whatsapp" target="_blank">
-            <span class="btn-icon">🟢</span> Написать в WhatsApp
-        </a>
-       
-        <a href="https://t.me/Leonid_Boldyrev" class="btn btn-telegram" target="_blank">
-            <span class="btn-icon">🔵</span> Написать в Telegram
-        </a>
-       
-        <a href="tel:+79044444570" class="btn btn-phone">
-            <span class="btn-icon">📞</span> +7 904 44-44-570
-        </a>
-       
-        <a href="tel:+78632669939" class="btn btn-office">
-            <span class="btn-icon">☎️</span> +7 (863) 266-99-39
-        </a>
-    </div>
-
-    <div class="services-section">
-        <h2>Наши услуги</h2>
-        <div class="services-list">
-            <div class="service-item">
-                <span class="service-icon">📊</span>
-                <div class="service-text"><strong>НВОС:</strong> Декларация о плате за НВОС</div>
+    <div class="container">
+        <div class="header">
+            <!-- Место под ваш логотип -->
+            <div class="logo-container">
+                <img src="logo.png" alt="Логотип Экологическая отчётность Юга">
             </div>
-            <div class="service-item">
-                <span class="service-icon">📈</span>
-                <div class="service-text"><strong>2-ТП:</strong> Статистическая отчётность</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">🛡️</span>
-                <div class="service-text"><strong>ПЭК:</strong> Производственный контроль</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">📦</span>
-                <div class="service-text"><strong>РОП:</strong> Расширенная ответственность</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">🗑️</span>
-                <div class="service-text"><strong>ПАСП:</strong> Паспорта опасных отходов</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">🔄</span>
-                <div class="service-text"><strong>УТИЛ:</strong> Помощь с утилизацией отходов</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">🔍</span>
-                <div class="service-text"><strong>АУДИТ:</strong> Экспресс-аудит документации</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">📒</span>
-                <div class="service-text"><strong>ЖДО:</strong> Журнал учета движения отходов</div>
-            </div>
-            <div class="service-item">
-                <span class="service-icon">💰</span>
-                <div class="service-text"><strong>ЭКОСБОР:</strong> Расчет и декларирование экологического сбора</div>
-            </div>
+            <h1>Болдырев Леонид Александрович</h1>
+            <div class="subtitle">Инженер-эколог</div>
+            <div class="region">Ростов-на-Дону и Юг России</div>
+            <div class="tagline">Отчётность без штрафов и авралов!</div>
         </div>
-    </div>
 
-    <div class="footer">
-        <a href="mailto:Ecology-Dona@yandex.ru" class="email-link">
-            <span class="btn-icon">✉️</span> Ecology-Dona@yandex.ru
-        </a>
-    </div>
-</div>
+        <div class="buttons-group">
+            <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
+                <span class="btn-icon">💬</span> Написать в WhatsApp
+            </a>
+            <a href="https://t.me" class="btn btn-telegram" target="_blank">
+                <span class="btn-icon">✈️</span> Написать в Telegram
+            </a>
+            <a href="tel:+79044444570" class="btn btn-phone">
+                <span class="btn-icon">📞</span> Позвонить (Моб.)
+            </a>
+            <a href="tel:+78632214570" class="btn btn-office btn-office">
+                <span class="btn-icon">🏢</span> Позвонить (Офис)
+            </a>
+        </div>
 
-</body>
-</html>
+        <div class="services-section">
+            <h2>Наши услуги</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="service-icon">📊</span>
+                    <div class="service-text"><strong>НВОС:</strong> Декларация о плате за негативное воздействие</div>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">📄</span>
+                    <div class="service-text"><strong>2-ТП:</strong> Формы статистической отчетности (отходы, воздух, водхоз)</div>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">📋</span>
+                    <div class="service-text"><strong>ПЭК:</strong> Программа и отчет об организации производственного контроля</div>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">♻️</span>
+                    <div class="service-text"><strong>РОП:</strong> Расчет нормативов утилизации и отчетность производителей</div>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">🗂</span>
+                    <div class="service-text"><strong>Паспорта отходов:</strong> Разработка паспортов I-IV классов опасности</div>
+                </div>
+                <div class="service-item">
