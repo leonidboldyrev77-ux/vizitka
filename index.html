@@ -394,7 +394,6 @@
             box-shadow: 0 8px 30px rgba(45, 74, 51, 0.4);
         }
 
-        /* НОВАЯ КНОПКА СКАЧАТЬ ВИЗИТКУ */
         .btn-download {
             display: inline-flex;
             align-items: center;
@@ -542,7 +541,6 @@
                 <a href="mailto:Ecology-Dona@yandex.ru" class="email-link">
                     ✉️ Ecology-Dona@yandex.ru
                 </a>
-                <!-- НОВАЯ КНОПКА СКАЧАТЬ -->
                 <a href="#" class="btn-download" id="downloadBtn">
                     ⬇️ Скачать визитку
                 </a>
@@ -555,17 +553,14 @@
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Клонируем контейнер для скачивания
             const container = document.querySelector('.container');
             const clone = container.cloneNode(true);
             
-            // Удаляем кнопку скачивания из клона
             const downloadBtnClone = clone.querySelector('#downloadBtn');
             if (downloadBtnClone) {
                 downloadBtnClone.remove();
             }
             
-            // Создаём полный HTML для скачивания
             const styles = document.querySelector('style').innerHTML;
             const html = `
 <!DOCTYPE html>
@@ -573,7 +568,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИП Болдырев Л.А. — Экологическая отчётность Юга</title>
+    <title>ИП Болдырев L.A. — Экологическая отчётность Юга</title>
     <style>${styles}</style>
     <style>
         body {
@@ -592,7 +587,6 @@
         .btn-download {
             display: none !important;
         }
-        /* Убираем кнопку скачивания из футера в сохранённой версии */
         .footer .btn-download {
             display: none !important;
         }
@@ -603,7 +597,6 @@
 </body>
 </html>`;
             
-            // Создаём Blob и скачиваем
             const blob = new Blob([html], { type: 'text/html' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
