@@ -3,347 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИП Болдырев L.A. — Экологическая отчётность Юга</title>
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ИП Болдырев L.A. — Экологическая отчётность Юга">
-    <meta property="og:description" content="Экологическая отчётность для бизнеса без штрафов и авралов. Все виды услуг: НВОС, ПЭК, РОП, Паспорта отходов, Аудит.">
-    <meta property="og:image" content="https://leonidboldyrev77-ux.github.io/vizitka/logo.png">
-    <meta property="og:url" content="https://leonidboldyrev77-ux.github.io/vizitka/">
-
+    <title>Болдырев Леонид Александрович — Инженер-эколог</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
         :root {
-            --primary-dark: #0d1f10;
-            --primary-mid: #1a3a1e;
-            --primary-green: #2d4a33;
-            --gold: #c9a84c;
-            --gold-light: #e8d5a3;
-            --card-bg: rgba(255, 255, 255, 0.96);
-            --text-main: #0d1f10;
-            --text-muted: #4a5a4a;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --primary-green: #1b5e20;
+            --whatsapp-color: #25d366;
+            --telegram-color: #0088cc;
+            --phone-color: #343a40;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
+            min-height: 100vh;
             padding: 15px;
-            background: var(--primary-dark);
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at 20% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(201, 168, 76, 0.05) 0%, transparent 50%),
-                linear-gradient(145deg, #0d1f10 0%, #1a3a1e 40%, #2d4a33 80%, #1a3a1e 100%);
-            z-index: 0;
-        }
-
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
-            z-index: 1;
-            animation: shimmer 4s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
         }
 
         .container {
             width: 100%;
-            max-width: 440px;
-            background: var(--card-bg);
-            border-radius: 32px;
-            padding: 28px 20px 30px;
-            position: relative;
-            z-index: 2;
-            margin-top: 8px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(201, 168, 76, 0.15);
-            animation: cardAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        @keyframes cardAppear {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 40px;
-            right: 40px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
-            border-radius: 0 0 4px 4px;
+            max-width: 450px;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
-        .logo-container {
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 16px auto;
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: -80px auto 15px;
             border-radius: 50%;
-            background: #ffffff;
-            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2), 0 0 0 4px var(--gold-light), 0 0 0 8px rgba(201, 168, 76, 0.15);
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.4s ease;
-            animation: logoPulse 3s ease-in-out infinite;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: #e9ecef;
         }
 
-        @keyframes logoPulse {
-            0%, 100% { box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2), 0 0 0 4px var(--gold-light), 0 0 0 8px rgba(201, 168, 76, 0.15); }
-            50% { box-shadow: 0 8px 45px rgba(0, 0, 0, 0.3), 0 0 0 6px var(--gold), 0 0 0 12px rgba(201, 168, 76, 0.20); }
-        }
-
-        .logo-container:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-container img {
+        .avatar img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            padding: 8px;
+            object-fit: cover;
+            display: block;
         }
 
         .header h1 {
             font-size: 22px;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--text-main);
-            letter-spacing: -0.5px;
+            margin-bottom: 6px;
         }
 
         .header .subtitle {
-            font-size: 13px;
-            font-weight: 700;
+            font-size: 15px;
+            font-weight: 600;
             color: var(--primary-green);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 2px;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
 
         .header .region {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--text-muted);
-            margin-top: 2px;
-            font-weight: 500;
+            margin-bottom: 12px;
         }
 
         .tagline {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 22px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #ffffff;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-mid));
-            box-shadow: 0 4px 20px rgba(45, 74, 51, 0.35);
-            border: 1px solid rgba(201, 168, 76, 0.2);
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 16px 0 22px 0;
-            padding: 12px 0;
-            border-top: 1px solid rgba(201, 168, 76, 0.2);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--gold);
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: var(--text-muted);
+            background-color: #e8f5e9;
+            color: var(--primary-green);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            display: inline-block;
         }
 
         .buttons-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 26px;
+            gap: 12px;
+            margin-bottom: 30px;
         }
 
-        /* ===== ОСНОВНЫЕ СТИЛИ КНОПОК ===== */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 18px;
-            border-radius: 14px;
+            padding: 15px 20px;
+            border-radius: 12px;
             text-decoration: none;
             color: #ffffff;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 0.3px;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, transparent 100%);
-            pointer-events: none;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        /* ===== ЦВЕТА КНОПОК (ИСПРАВЛЕНЫ) ===== */
-        .btn-whatsapp { background: linear-gradient(135deg, #25d366, #1da851); }
-        .btn-telegram { background: linear-gradient(135deg, #0088cc, #006699); }
-        .btn-max { background: linear-gradient(135deg, #7c5cfc, #5c3bf5); }
-        .btn-phone { background: linear-gradient(135deg, #4a4a4a, #2d2d2d); }
-       
-        .btn-office {
-            background: transparent;
-            border: 2px solid #bcc9bc;
-            color: var(--text-main);
-            box-shadow: none;
-        }
-
-        .btn-office::after {
-            display: none;
-        }
-
-        .btn-office:hover {
-            border-color: var(--primary-green);
-            background: rgba(45, 74, 51, 0.05);
-            transform: translateY(-3px);
-        }
+        .btn-whatsapp { background-color: var(--whatsapp-color); }
+        .btn-telegram { background-color: var(--telegram-color); }
+        .btn-phone { background-color: var(--phone-color); }
+        .btn-email { background-color: #6c757d; }
 
         .btn-icon {
-            font-size: 19px;
-            margin-right: 10px;
+            font-size: 20px;
+            margin-right: 12px;
+            display: inline-block;
         }
 
-        .btn .btn-arrow {
-            margin-left: auto;
-            font-size: 14px;
-            opacity: 0.6;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover .btn-arrow {
-            transform: translateX(4px);
-            opacity: 1;
-        }
-
-        /* ===== УСЛУГИ ===== */
         .services-section h2 {
-            font-size: 13px;
+            font-size: 16px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 0.8px;
             color: var(--text-muted);
             margin-bottom: 12px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .services-section h2::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(201, 168, 76, 0.3), transparent);
+            padding-left: 5px;
         }
 
         .services-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
         }
 
         .service-item {
             display: flex;
-            align-items: center;
-            padding: 10px 12px;
-            background: rgba(45, 74, 51, 0.05);
-            border-radius: 10px;
-            border: 1px solid rgba(45, 74, 51, 0.06);
-            transition: all 0.3s ease;
-        }
-
-        .service-item:hover {
-            background: rgba(45, 74, 51, 0.10);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(45, 74, 51, 0.08);
+            align-items: flex-start;
+            padding: 12px 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-green);
+            border-radius: 0 10px 10px 0;
         }
 
         .service-icon {
-            font-size: 16px;
-            margin-right: 8px;
-            flex-shrink: 0;
+            font-size: 18px;
+            margin-right: 12px;
+            line-height: 1.2;
         }
 
         .service-text {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-main);
-            line-height: 1.3;
+            font-size: 14px;
         }
 
         .service-text strong {
@@ -351,282 +175,93 @@
             font-weight: 700;
         }
 
-        /* ===== ПОДВАЛ ===== */
         .footer {
             text-align: center;
-            border-top: 1px solid rgba(201, 168, 76, 0.15);
-            padding-top: 22px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
         }
 
         .email-link {
             display: inline-flex;
             align-items: center;
+            color: var(--text-main);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            padding: 10px 24px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, var(--primary-green), var(--primary-mid));
-            color: #ffffff;
-            box-shadow: 0 4px 20px rgba(45, 74, 51, 0.3);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(201, 168, 76, 0.15);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: #f1f3f5;
+            transition: background-color 0.2s;
         }
 
         .email-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(45, 74, 51, 0.4);
+            background-color: #e9ecef;
         }
 
-        .btn-download {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            padding: 10px 24px;
-            border-radius: 30px;
-            background: transparent;
-            color: var(--primary-green);
-            border: 2px solid var(--primary-green);
-            transition: all 0.3s ease;
-            gap: 8px;
-        }
-
-        .btn-download:hover {
-            background: var(--primary-green);
-            color: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(45, 74, 51, 0.3);
-        }
-
-        .qr-container {
-            margin: 10px 0 5px 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .qr-container img {
-            width: 100px;
-            height: 100px;
-            border-radius: 12px;
-            border: 2px solid rgba(201, 168, 76, 0.2);
-            padding: 4px;
-            background: #ffffff;
-            transition: transform 0.3s ease;
-        }
-
-        .qr-container img:hover {
-            transform: scale(1.05);
-        }
-
-        .footer-inn {
-            font-size: 11px;
+        .footer-note {
+            margin-top: 10px;
+            font-size: 12px;
             color: var(--text-muted);
-            margin-top: 12px;
-            opacity: 0.6;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 420px) {
-            .container { padding: 20px 14px 24px; }
-            .services-list { grid-template-columns: 1fr 1fr; gap: 6px; }
-            .service-item { padding: 8px 10px; }
-            .service-text { font-size: 11px; }
-            .service-icon { font-size: 14px; margin-right: 6px; }
-            .header h1 { font-size: 19px; }
-            .logo-container { width: 110px; height: 110px; }
-            .stats { gap: 20px; }
-            .stat-number { font-size: 17px; }
-            .qr-container img { width: 80px; height: 80px; }
-        }
-
-        @media (max-width: 360px) {
-            .services-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
+        <!-- Шапка с логотипом -->
         <div class="header">
-            <div class="logo-container">
-                <img src="logo.png" alt="Экологическая отчётность Юга">
+            <div class="avatar">
+                <img src="logo.png" alt="Логотип">
             </div>
             <h1>Болдырев Леонид Александрович</h1>
             <div class="subtitle">Инженер-эколог</div>
-            <div class="region">Южный федеральный округ (удалённо)</div>
-            <div class="tagline">🌿 Отчётность без штрафов и авралов!</div>
+            <div class="region">Москва и Московская область</div>
+            <div class="tagline">Экологическая безопасность вашего бизнеса</div>
         </div>
 
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">7+</span>
-                <span class="stat-label">Лет опыта</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">120+</span>
-                <span class="stat-label">Проектов</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Без штрафов</span>
-            </div>
-        </div>
-
-        <div class="qr-container">
-            <a href="https://t.me/Leonid_Boldarev" target="_blank">
-                <img src="4DBF48FB-5B7F-48C9-99BB-05C48BE47600.webp" alt="QR-код Telegram">
-            </a>
-        </div>
-
+        <!-- Кнопки связи -->
         <div class="buttons-group">
-            <a href="https://max.ru/u/f9LHodD0cOLNM2wXImE2PAMqzOQOAwSGLQyC8h-qgjTvR9TnV4y7Ud8-M3o" class="btn btn-max" target="_blank">
-                <span class="btn-icon">💜</span> Написать в МАКС
-                <span class="btn-arrow">→</span>
+            <a href="https://wa.me/79161234567" class="btn btn-whatsapp" target="_blank">
+                <span class="btn-icon">💬</span> WhatsApp
             </a>
-            <a href="https://wa.me/79044444570?text=Здравствуйте!%20Интересуют%20экологические%20услуги" class="btn btn-whatsapp" target="_blank">
-                <span class="btn-icon">📞</span> Написать в WhatsApp
-                <span class="btn-arrow">→</span>
+            <a href="https://t.me/username" class="btn btn-telegram" target="_blank">
+                <span class="btn-icon">✈️</span> Telegram
             </a>
-            <a href="https://t.me/Leonid_Boldarev" class="btn btn-telegram" target="_blank">
-                <span class="btn-icon">✈️</span> Написать в Telegram
-                <span class="btn-arrow">→</span>
+            <a href="tel:+79161234567" class="btn btn-phone">
+                <span class="btn-icon">📞</span> Позвонить
             </a>
-            <a href="tel:+79044444570" class="btn btn-phone">
-                <span class="btn-icon">📞</span> +7 904 44-44-570
-                <span class="btn-arrow">→</span>
-            </a>
-            <a href="tel:+78632669939" class="btn btn-office">
-                <span class="btn-icon">☎️</span> +7 (863) 266-99-39
-                <span class="btn-arrow">→</span>
+            <a href="mailto:info@example.com" class="btn btn-email">
+                <span class="btn-icon">✉️</span> Написать на почту
             </a>
         </div>
 
+        <!-- Услуги -->
         <div class="services-section">
             <h2>Услуги</h2>
             <div class="services-list">
                 <div class="service-item">
-                    <span class="service-icon">📊</span>
-                    <div class="service-text"><strong>НВОС</strong> Платежи</div>
-                </div>
-                <div class="service-item">
-                    <span class="service-icon">📈</span>
-                    <div class="service-text"><strong>2-ТП</strong> Статистика</div>
-                </div>
-                <div class="service-item">
-                    <span class="service-icon">🛡️</span>
-                    <div class="service-text"><strong>ПЭК</strong> Контроль</div>
-                </div>
-                <div class="service-item">
-                    <span class="service-icon">📦</span>
-                    <div class="service-text"><strong>РОП</strong> Отчётность</div>
-                </div>
-                <div class="service-item">
-                    <span class="service-icon">🗑️</span>
-                    <div class="service-text"><strong>Паспорта</strong> Отходов</div>
-                </div>
-                <div class="service-item">
                     <span class="service-icon">📋</span>
-                    <div class="service-text"><strong>Журнал</strong> Движения отходов</div>
+                    <span class="service-text"><strong>Экологическая документация</strong> — разработка паспортов, проектов</span>
                 </div>
                 <div class="service-item">
-                    <span class="service-icon">🔄</span>
-                    <div class="service-text"><strong>Утилизация</strong> Помощь</div>
+                    <span class="service-icon">🏭</span>
+                    <span class="service-text"><strong>Экологический аудит</strong> — проверка соответствия требованиям</span>
                 </div>
                 <div class="service-item">
-                    <span class="service-icon">🔍</span>
-                    <div class="service-text"><strong>Аудит</strong> Документов</div>
+                    <span class="service-icon">♻️</span>
+                    <span class="service-text"><strong>Обращение с отходами</strong> — учёт, лимиты, отчётность</span>
                 </div>
                 <div class="service-item">
-                    <span class="service-icon">📒</span>
-                    <div class="service-text"><strong>Проекты</strong> Разработка</div>
+                    <span class="service-icon">💧</span>
+                    <span class="service-text"><strong>Водопользование</strong> — получение разрешений, программы</span>
                 </div>
             </div>
         </div>
 
+        <!-- Подвал -->
         <div class="footer">
-            <div class="footer-links">
-                <a href="mailto:Ecology-Dona@yandex.ru" class="email-link">
-                    ✉️ Ecology-Dona@yandex.ru
-                </a>
-                <a href="#" class="btn-download" id="downloadBtn">
-                    ⬇️ Скачать визитку
-                </a>
-            </div>
-            <div class="footer-inn">ИП Болдырев Л.А. • Экологическая отчётность Юга</div>
+            <a href="mailto:info@example.com" class="email-link">✉️ info@example.com</a>
+            <div class="footer-note">© 2024 Болдырев Леонид Александрович</div>
         </div>
     </div>
-
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const container = document.querySelector('.container');
-            const clone = container.cloneNode(true);
-            
-            const downloadBtnClone = clone.querySelector('#downloadBtn');
-            if (downloadBtnClone) {
-                downloadBtnClone.remove();
-            }
-            
-            const styles = document.querySelector('style').innerHTML;
-            const html = `
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИП Болдырев L.A. — Экологическая отчётность Юга</title>
-    <style>${styles}</style>
-    <style>
-        body {
-            padding: 20px;
-            background: var(--primary-dark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            animation: none;
-            opacity: 1;
-            transform: none;
-        }
-        .btn-download {
-            display: none !important;
-        }
-        .footer .btn-download {
-            display: none !important;
-        }
-    </style>
-</head>
-<body>
-    ${clone.outerHTML}
-</body>
-</html>`;
-            
-            const blob = new Blob([html], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'vizitka_Boldyrev_eco.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        });
-    </script>
-
 </body>
 </html>
-
