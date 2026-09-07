@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="ИП Болдырев L.A. — Экологическая отчётность Юга">
     <meta property="og:description" content="Экологическая отчётность для бизнеса без штрафов и авралов. Все виды услуг: НВОС, ПЭК, РОП, Паспорта отходов, Аудит.">
-    <meta property="og:image" content="https://leonidboldyrev77-ux.github.io/vizitka/logo.webp">
+    <meta property="og:image" content="https://leonidboldyrev77-ux.github.io/vizitka/logo.png">
     <meta property="og:url" content="https://leonidboldyrev77-ux.github.io/vizitka/">
 
     <style>
@@ -18,15 +18,11 @@
             --primary-dark: #0d1f10;
             --primary-mid: #1a3a1e;
             --primary-green: #2d4a33;
-            --primary-light: #4a6b50;
             --gold: #c9a84c;
             --gold-light: #e8d5a3;
             --card-bg: rgba(255, 255, 255, 0.96);
             --text-main: #0d1f10;
             --text-muted: #4a5a4a;
-            --whatsapp-color: #25d366;
-            --telegram-color: #0088cc;
-            --max-color: #5c3bf5;
         }
 
         * {
@@ -35,12 +31,8 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -75,8 +67,8 @@
         }
 
         @keyframes shimmer {
-            0%, 100% { opacity: 0.6; transform: scaleX(1); }
-            50% { opacity: 1; transform: scaleX(1.02); }
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
         }
 
         .container {
@@ -154,7 +146,6 @@
             font-weight: 800;
             color: var(--text-main);
             letter-spacing: -0.5px;
-            line-height: 1.2;
         }
 
         .header .subtitle {
@@ -183,7 +174,6 @@
             color: #ffffff;
             background: linear-gradient(135deg, var(--primary-green), var(--primary-mid));
             box-shadow: 0 4px 20px rgba(45, 74, 51, 0.35);
-            letter-spacing: 0.5px;
             border: 1px solid rgba(201, 168, 76, 0.2);
         }
 
@@ -206,7 +196,6 @@
             font-size: 20px;
             font-weight: 800;
             color: var(--gold);
-            letter-spacing: -0.5px;
         }
 
         .stat-label {
@@ -224,6 +213,7 @@
             margin-bottom: 26px;
         }
 
+        /* ===== ОСНОВНЫЕ СТИЛИ КНОПОК ===== */
         .btn {
             display: flex;
             align-items: center;
@@ -260,6 +250,7 @@
             transform: scale(0.97);
         }
 
+        /* ===== ЦВЕТА КНОПОК (ИСПРАВЛЕНЫ) ===== */
         .btn-whatsapp { background: linear-gradient(135deg, #25d366, #1da851); }
         .btn-telegram { background: linear-gradient(135deg, #0088cc, #006699); }
         .btn-max { background: linear-gradient(135deg, #7c5cfc, #5c3bf5); }
@@ -285,7 +276,6 @@
         .btn-icon {
             font-size: 19px;
             margin-right: 10px;
-            display: inline-block;
         }
 
         .btn .btn-arrow {
@@ -300,6 +290,7 @@
             opacity: 1;
         }
 
+        /* ===== УСЛУГИ ===== */
         .services-section h2 {
             font-size: 13px;
             text-transform: uppercase;
@@ -334,7 +325,6 @@
             border-radius: 10px;
             border: 1px solid rgba(45, 74, 51, 0.06);
             transition: all 0.3s ease;
-            cursor: default;
         }
 
         .service-item:hover {
@@ -361,6 +351,7 @@
             font-weight: 700;
         }
 
+        /* ===== ПОДВАЛ ===== */
         .footer {
             text-align: center;
             border-top: 1px solid rgba(201, 168, 76, 0.15);
@@ -417,6 +408,26 @@
             box-shadow: 0 8px 25px rgba(45, 74, 51, 0.3);
         }
 
+        .qr-container {
+            margin: 10px 0 5px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .qr-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            border: 2px solid rgba(201, 168, 76, 0.2);
+            padding: 4px;
+            background: #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        .qr-container img:hover {
+            transform: scale(1.05);
+        }
+
         .footer-inn {
             font-size: 11px;
             color: var(--text-muted);
@@ -436,6 +447,7 @@
             .logo-container { width: 110px; height: 110px; }
             .stats { gap: 20px; }
             .stat-number { font-size: 17px; }
+            .qr-container img { width: 80px; height: 80px; }
         }
 
         @media (max-width: 360px) {
@@ -448,7 +460,7 @@
     <div class="container">
         <div class="header">
             <div class="logo-container">
-                <img src="logo.webp" alt="Экологическая отчётность Юга">
+                <img src="logo.png" alt="Экологическая отчётность Юга">
             </div>
             <h1>Болдырев Леонид Александрович</h1>
             <div class="subtitle">Инженер-эколог</div>
@@ -469,6 +481,12 @@
                 <span class="stat-number">100%</span>
                 <span class="stat-label">Без штрафов</span>
             </div>
+        </div>
+
+        <div class="qr-container">
+            <a href="https://t.me/Leonid_Boldarev" target="_blank">
+                <img src="4DBF48FB-5B7F-48C9-99BB-05C48BE47600.webp" alt="QR-код Telegram">
+            </a>
         </div>
 
         <div class="buttons-group">
@@ -611,3 +629,4 @@
 
 </body>
 </html>
+
