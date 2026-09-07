@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИП Болдырев Л.А. — Экологические услуги</title>
+    <title>ИП Болдырев L.A. — Экологические услуги</title>
 
-    <!-- МЕТА-ТЕГИ ДЛЯ КРАСИВОГО ПРЕВЬЮ В WHATSAPP И TELEGRAM -->
+    <!-- МЕТА-ТЕГИ ДЛЯ КРАСИВОГО ПРЕВЬЮ В WHATSAPP, TELEGRAM И МАКС -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="ИП Болдырев Л.А. — Экологические услуги">
-    <meta property="og:description" content="Экологическая отчётность для бизнеса без штрафов и авралов. Все виды услуг: НВОС, ПЭК, РОП, Паспорта отходов, Аудит.">
+    <meta property="og:title" content="ИП Болдырев L.A. — Экологические услуги">
+    <meta property="og:description" content="Экологическая отчётность для бизнеса без штрафов and авралов. Все виды услуг: НВОС, ПЭК, РОП, Паспорта отходов, Аудит.">
     <meta property="og:image" content="https://github.io">
     <meta property="og:url" content="https://github.io">
 
     <style>
         :root {
-            --bg-color: #f4f6f4;
-            --card-bg: #ffffff;
+            --bg-color: #e2e8e2; /* Мягкий внешний фон страницы */
+            --card-bg: #eff3ef; /* Тот самый нежный пастельно-изумрудный фон вашей карточки */
             --text-main: #2b302b;
-            --text-muted: #666e66;
-            --primary-green: #4b664c; /* Благородный хвойный цвет из вашего логотипа */
+            --text-muted: #576057;
+            --primary-green: #4b664c; /* Фирменный глубокий хвойный цвет из вашего логотипа */
             --whatsapp-color: #25d366;
             --telegram-color: #0088cc;
+            --max-color: #5c3bf5;
             --phone-color: #343a40;
-            --light-eco-bg: #eef2ee;
+            --light-eco-bg: #dfebd4; /* Более насыщенный пастельный для плашек и услуг */
         }
 
         * {
@@ -48,7 +49,7 @@
             max-width: 450px;
             background-color: var(--card-bg);
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(75, 102, 76, 0.08);
+            box-shadow: 0 12px 40px rgba(60, 80, 61, 0.12);
             padding: 30px 20px;
             margin-top: 10px;
         }
@@ -58,19 +59,20 @@
             margin-bottom: 25px;
         }
 
+        /* Белый фон логотипа строго сохранен и защищен */
         .logo-container {
-            width: 150px; /* Увеличили размер до 150px */
-            height: 150px; /* Увеличили размер до 150px */
-            max-width: 100%; /* Защита от вылезания на маленьких экранах */
+            width: 150px;
+            height: 150px;
+            max-width: 100%;
             margin: 5px auto 20px auto;
             border-radius: 50%;
-            background-color: #ffffff;
-            box-shadow: 0 6px 20px rgba(75, 102, 76, 0.12);
+            background-color: #ffffff; /* Логотип остается на чистом белом фоне */
+            box-shadow: 0 6px 20px rgba(75, 102, 76, 0.15);
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 3px solid var(--primary-green);
+            border: 4px solid #ffffff; /* Белый кант отделяет логотип от изумрудного фона */
         }
 
         .logo-container img {
@@ -102,12 +104,12 @@
         }
 
         .tagline {
-            background-color: var(--light-eco-bg);
-            color: var(--primary-green);
+            background-color: #dfebd4;
+            color: #3b523c;
             padding: 10px 16px;
             border-radius: 12px;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
         }
 
@@ -128,7 +130,7 @@
             color: #ffffff;
             font-size: 16px;
             font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: transform 0.2s ease;
         }
 
@@ -138,12 +140,12 @@
 
         .btn-whatsapp { background-color: var(--whatsapp-color); }
         .btn-telegram { background-color: var(--telegram-color); }
-        .btn-max { background-color: #5c3bf5; }
+        .btn-max { background-color: var(--max-color); }
         .btn-phone { background-color: var(--phone-color); }
        
         .btn-office {
             background-color: transparent;
-            border: 2px solid #ced4da;
+            border: 2px solid #a3b3a3;
             color: var(--text-main);
             box-shadow: none;
         }
@@ -174,10 +176,10 @@
             display: flex;
             align-items: flex-start;
             padding: 14px 16px;
-            background-color: #fafbfa;
+            background-color: rgba(255, 255, 255, 0.45); /* Полупрозрачный белый на изумрудном фоне */
             border-left: 4px solid var(--primary-green);
             border-radius: 0 12px 12px 0;
-            border: 1px solid #eef0ee;
+            border: 1px solid rgba(75, 102, 76, 0.12);
             border-left-width: 4px;
         }
 
@@ -189,7 +191,7 @@
 
         .service-text {
             font-size: 14px;
-            color: #333933;
+            color: #2b302b;
         }
 
         .service-text strong {
@@ -199,21 +201,20 @@
 
         .footer {
             text-align: center;
-            border-top: 1px solid #eef0ee;
+            border-top: 1px solid rgba(75, 102, 76, 0.15);
             padding-top: 25px;
         }
 
         .email-link {
             display: inline-flex;
             align-items: center;
-            color: var(--text-main);
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
             padding: 10px 20px;
             border-radius: 10px;
-            background-color: var(--light-eco-bg);
-            color: var(--primary-green);
+            background-color: #dfebd4;
+            color: #3b523c;
         }
     </style>
 </head>
@@ -227,22 +228,24 @@
             <h1>Болдырев Леонид Александрович</h1>
             <div class="subtitle">Инженер-эколог</div>
             <div class="region">Южный федеральный округ (удалённо)</div>
-            <div class="tagline">Отчётность без штрафов и авралов!</div>
+            <div class="tagline">Отчётность без штрафов and авралов!</div>
         </div>
 
         <div class="buttons-group">
             <a href="https://max.ru" class="btn btn-max" target="_blank">Написать в МАКС</a>
             
-            
             <a href="https://wa.me" class="btn btn-whatsapp" target="_blank">
-                <span class="btn-icon">🟢</span> Написать в WhatsApp
+                <span class="btn-icon">📞</span> Написать в WhatsApp
             </a>
+            
             <a href="https://t.me" class="btn btn-telegram" target="_blank">
-                <span class="btn-icon">🔵</span> Написать в Telegram
+                <span class="btn-icon">✈️</span> Написать в Telegram
             </a>
+            
             <a href="tel:+79044444570" class="btn btn-phone">
                 <span class="btn-icon">📞</span> +7 904 44-44-570
             </a>
+            
             <a href="tel:+78632669939" class="btn btn-office">
                 <span class="btn-icon">☎️</span> +7 (863) 266-99-39
             </a>
@@ -284,18 +287,4 @@
                     <div class="service-text"><strong>ЖДО:</strong> Журнал учета движения отходов</div>
                 </div>
                 <div class="service-item">
-                    <span class="service-icon">💰</span>
-                    <div class="service-text"><strong>ЭКОСБОР:</strong> Расчет и декларирование экологического сбора</div>
-                </div>
-            </div>
-        </div>
 
-        <div class="footer">
-            <a href="mailto:Ecology-Dona@yandex.ru" class="email-link">
-                <span class="btn-icon">✉️</span> Ecology-Dona@yandex.ru
-            </a>
-        </div>
-    </div>
-
-</body>
-</html>
